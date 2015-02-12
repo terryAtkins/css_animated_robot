@@ -1,0 +1,266 @@
+
+span {
+	padding: 0 8px;
+}
+.main {
+    position: relative;
+    left: 150px; 
+    top: 0px;
+}
+
+.robot {
+    
+    position: relative;
+    left: 100px; 
+    top: 30px;
+  	
+}
+
+.beep {
+  width: 5px;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 10px solid #777;
+  border-bottom: 80px solid #888;
+  position: relative;
+  left: 140px;
+}
+
+.buttons {
+	position: absolute;
+	left: 30px;
+	top: 60px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	display: block;
+	padding: 10px 0;
+}
+
+
+.brain{
+   background: radial-gradient(circle, white 15%, transparent 40%);
+   background: -moz-radial-gradient(circle, white 15%, transparent 40%); 
+   background: -webkit-radial-gradient(circle, white 15%, transparent 40%);
+   background-color: #cc5;
+   background-size: 75px 150px;
+   height: 150px;
+   width: 150px;
+   border-radius: 60px 60px 10px 10px;
+   border-bottom: 40px double #666; 
+   position: relative;
+   left: 70px;
+
+}
+
+.evil {
+    background: radial-gradient(circle, red 15%, transparent 40%);
+    background: -moz-radial-gradient(circle, red 15%, transparent 40%); 
+    background: -webkit-radial-gradient(circle, red 15%, transparent 40%);
+    background-color: #cc5;
+    background-size: 75px 150px;
+    height: 150px;
+    width: 150px;
+    border-radius: 60px 60px 10px 10px;
+    border-bottom: 40px double #666; 
+    position: relative;
+    left: 70px;
+}
+
+
+.flasher {
+    background: radial-gradient(circle, white 15%, transparent 40%);
+    background: -moz-radial-gradient(circle, white 15%, transparent 40%); 
+    background: -webkit-radial-gradient(circle, white 15%, transparent 40%);
+    background-color: #white;
+    background-size: 40px 40px;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 128px;
+	top: 10px;
+	
+}
+
+@keyframes blink {
+   from {
+	   background: radial-gradient(circle, white 15%, transparent 40%);
+	   background: -moz-radial-gradient(circle, white 15%, transparent 40%); 
+	   background: -webkit-radial-gradient(circle, white 15%, transparent 40%);
+
+	  
+	
+	
+	} to {
+	    background: radial-gradient(circle, red 15%, transparent 40%);
+	    background: -moz-radial-gradient(circle, red 15%, transparent 40%); 
+	    background: -webkit-radial-gradient(circle, red 15%, transparent 40%);
+
+	    
+	
+  }
+}
+@-webkit-keyframes blink {
+    from {
+	    background: radial-gradient(circle, white 15%, transparent 40%);
+	    background: -moz-radial-gradient(circle, white 15%, transparent 40%); 
+	    background: -webkit-radial-gradient(circle, white 15%, transparent 40%);
+
+	    
+ 	} to {
+	    background: radial-gradient(circle, red 15%, transparent 40%);
+	    background: -moz-radial-gradient(circle, red 15%, transparent 40%); 
+	    background: -webkit-radial-gradient(circle, red 15%, transparent 40%);
+
+	   
+	
+   }
+}
+@-moz-keyframes blink {
+    from {
+	    background: radial-gradient(circle, white 15%, transparent 40%);
+	    background: -moz-radial-gradient(circle, white 15%, transparent 40%); 
+	    background: -webkit-radial-gradient(circle, white 15%, transparent 40%);
+
+	    
+ 	} to {
+	    background: radial-gradient(circle, red 15%, transparent 40%);
+	    background: -moz-radial-gradient(circle, red 15%, transparent 40%); 
+	    background: -webkit-radial-gradient(circle, red 15%, transparent 40%);
+
+	   
+   }
+}
+
+.flasher {
+   animation: blink .5s infinite;
+   -webkit-animation: blink .5s infinite;
+   -moz-animation: blink .5s infinite;
+
+}
+
+.torso {
+  height: 0;
+  width: 140px;
+  border-top: 300px solid #bc6; /* change this colour */
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-radius: 20px 20px 100px 100px;
+}
+
+.left {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: rotate(200deg);
+  -webkit-transform: rotate(200deg);
+  -moz-transform: rotate(200deg);
+  position: relative;
+  top: -320px;
+  left: -190px;
+  z-index: -1;
+}
+
+.right {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: scaleY(-1) rotate(20deg); /* from 20 to 100 */
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+  position: relative;
+  top: -620px;  /* from -620 to 730 */
+  left: 190px; /* from 190 to  220*/
+  z-index: -1;
+}
+
+@keyframes liftArm {
+   from {
+	   transform: scaleY(-1) rotate(20deg); /* from 20 to 100 */
+	    position: relative;
+	   top: -620px;  /* from -620 to 730 */
+	   left: 190px; /* from 190 to  220*/
+	   z-index: -1;
+
+	  
+	
+	
+	} to {
+	    transform: scaleY(-1) rotate(100deg); /* from 20 to 100 */
+		 position: relative;
+	    top: -730px;  /* from -620 to 730 */
+	    left: 220px; /* from 190 to  220*/
+	    z-index: -1;
+
+	    
+	
+  }
+}
+@-webkit-keyframes liftArm {
+    from {
+	    -webkit-transform: scaleY(-1) rotate(20deg); /* from 20 to 100 */
+
+
+		 position: relative;
+	    top: -620px;  /* from -620 to 730 */
+	    left: 190px; /* from 190 to  220*/
+	    z-index: -1;
+
+	    
+ 	} to {
+	    -webkit-transform: scaleY(-1) rotate(100deg); /* from 20 to 100 */
+
+		 position: relative;
+	    top: -730px;  /* from -620 to 730 */
+	    left: 220px; /* from 190 to  220*/
+	    z-index: -1;   
+	
+   }
+}
+@-moz-keyframes liftArm {
+    from {
+	    -moz-transform: scaleY(-1) rotate(20deg); /* from 20 to 100 */
+
+		 position: relative;
+	    top: -620px;  /* from -620 to 730 */
+	    left: 190px; /* from 190 to  220*/
+	    z-index: -1;
+
+	    
+ 	} to {
+	    -moz-transform: scaleY(-1) rotate(100deg); /* from 20 to 100 */
+
+		 position: relative;
+	    top: -730px;  /* from -620 to 730 */
+	    left: 220px; /* from 190 to  220*/
+	    z-index: -1;
+
+	   
+   }
+}
+
+.raiseArm {
+    animation: liftArm 3s 1;
+    -webkit-animation: liftArm 3s 1;
+    -moz-animation: liftArm 3s 1;	
+	
+}
+
+.foot {
+  height: 40px;
+  width: 40px;
+  background: #ccc;
+  border-radius: 40px;
+  border: 15px solid #999;
+  position: relative;
+  left: 110px;
+  top: -10px;
+  z-index: -1;
+}
